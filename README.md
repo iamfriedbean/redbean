@@ -49,6 +49,10 @@ Run vulnerability scan against target. Also run analysis using artificial-intell
 $redbean -ip 192.168.0.1 -vscan -category 6
 ```
 
+Query OpenAI GPT4.
+```
+$redbean -gptassist "How to fix SQLi vulnerabilities?"
+```
 
 Refer to the help section for other command options and features: 
 
