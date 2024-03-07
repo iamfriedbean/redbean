@@ -1,5 +1,5 @@
 # redbean
-Redbean is a blackbox - fast TCP port and vulnerability scanner utilising artificial intelligence analysis as guide to more effective remediation of vulnerabilities.
+Redbean is a blackbox - fast port and vulnerability scanner utilising artificial intelligence analysis as guide to more effective remediation of vulnerabilities.
 ## How to install 
 
 Part of Beanscan Suite of tools. See beanscan.
@@ -18,14 +18,6 @@ $update-beanscan
 ```   
 
 *****
-
-## System/Platform Requirements
-
-- Ubuntu Linux 20.04 LTS and above.
-- BASH required
-- Internet Connection
-- SUDO rights (required for Ubuntu package update and headless crawling)
-  
 
 
 ## Some Usage examples
