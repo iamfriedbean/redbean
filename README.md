@@ -49,10 +49,10 @@ $redbean -gptassist "How to fix SQLi vulnerabilities?"
 Refer to the help section for other command options and features: 
 
 ```
-|  _ \ ___  __| | |__   ___  __ _ _ __
-| |_) / _ \/ _` | '_ \ / _ \/ _` | '_ \ 
-|  _ <  __/ (_| | |_) |  __/ (_| | | | |
-|_| \_\___|\__,_|_.__/ \___|\__,_|_| |_|v0.20 (experimental)
+|  _ \ ___  __| | |__   ___  __ _ _ __      / \  |_ _|
+| |_) / _ \/ _` | '_ \ / _ \/ _` | '_ \    / _ \  | |
+|  _ <  __/ (_| | |_) |  __/ (_| | | | |  / ___ \ | |
+|_| \_\___|\__,_|_.__/ \___|\__,_|_| |_|o/_/   \_\___| v0.20 (experimental)
 @iamfriedbean || AI Risk Guided Vulnerability Scanner
 =====================================================
 
