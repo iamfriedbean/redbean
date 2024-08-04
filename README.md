@@ -50,10 +50,12 @@ $redbean -gptassist "How to fix SQLi vulnerabilities?"
 Refer to the help section for other command options and features: 
 
 ```
+
+ ____          _ _                           _    ___
 |  _ \ ___  __| | |__   ___  __ _ _ __      / \  |_ _|
 | |_) / _ \/ _` | '_ \ / _ \/ _` | '_ \    / _ \  | |
 |  _ <  __/ (_| | |_) |  __/ (_| | | | |  / ___ \ | |
-|_| \_\___|\__,_|_.__/ \___|\__,_|_| |_|o/_/   \_\___| v0.20 (experimental)
+|_| \_\___|\__,_|_.__/ \___|\__,_|_| |_|o/_/   \_\___| v0.30 (experimental)
 @iamfriedbean || AI Risk Guided Vulnerability Scanner
 =====================================================
 
@@ -68,16 +70,20 @@ PORT SCANNING:
    -ports       Comma-separated list of ports to scan (e.g. -ports 21,22,80,443)
    -portsfile   File containing list of ports to scan (e.g. -portsfile ~/.tmp/top1k-ports.txt)
    -ipfile      File containing list of IP addresses to scan (e.g. -ipfile ~/.tmp/iplist.txt)
-   -timeout     Scan timeout in milliseconds. Default is 200  (e.g. -timeout 500)
-   -threads     Number of threads to use for scanning. Default is 30 (e.g. -threads 50)
    -probe       Probe open ports to determine running service
    -sploit      Search for Metasploit POC when used with -probe flag
    -proxy       Use SOCKS proxy address (e.g., socks5://127.0.0.1:9050). (limited functionalities)
    -udp         Run a UDP port scan. (best-effort)
-   -update      Run an update. Ignores all the other flags
+
+TRAFFIC CONTROL:                                                             
+   -timeout     Scan timeout in milliseconds. Default is 200  (e.g. -timeout 500)
+   -threads     Number of concurrent threads to use for scanning. Default is 30 (e.g. -threads 50)
+   -max-rate    Number of request per second. Default is 100 (e.g. -max-rate 120)
 
 VULNERABILITY SCANNING:                                                     
-   -vscan     Scans for vulnerabilities.
+   -vscan     Scans for vulnerabilities
+       Optional:
+           -critical    Limit scans to critical vulnerabilities only
 
 AI RISK/IMPACT ANALYSIS:
    -azgpt      Use Azure OpenAI Service over default OpenAI (ChatGPT)
@@ -92,6 +98,7 @@ AI RISK/IMPACT ANALYSIS:
                6 - Internal network only. Not Important nor Business Critical
 
 MISCELLANEOUS:                                                     
+   -osint      Fetch available open source intelligence data.
    -cvelist    List of testable CVEs. Ignores all the other flags
    -gptassist  Use simple query using OPENAI ChatGPT. Ignores all the other flags
    -azassist   Use simple query using Azure OPENAI Service. Ignores all the other flags
@@ -101,10 +108,11 @@ USAGE EXAMPLES:
    redbean -ipfile ~/.tmp/iplist.txt -ports 80,443 
    redbean -ipfile ~/.tmp/iplist.txt -portsfile ~/wordlist/65k-ports.txt 
    redbean -vscan -ip 192.168.0.1 -portsfile ~/wordlist/65k-ports.txt
+   redbean -ip 192.168.0.1 -vscan -category 6
  
-   redbean -ip 192.168.0.1 -vscan
- 
-Note: Text file containing IP addresses or ports must only have one item per line. If no port is specified, it will use the default top 1K ports
+Note: Text file containing IP addresses or ports must only have one item per line. If no port is specified, it will use the default top 1K ports.
+For more info, please visit - https://github.com/iamfriedbean/Redbean.AI/
+
 ```
 
 
