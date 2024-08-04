@@ -1,5 +1,6 @@
 # Redbean.AI
 Redbean.AI is a blackbox - fast port and vulnerability scanner utilising artificial intelligence analysis as guide to more effective remediation of vulnerabilities.
+Powered by Open Source.
 ## How to install 
 
 Part of Beanscan Suite of tools. See beanscan.
